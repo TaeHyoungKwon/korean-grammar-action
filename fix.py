@@ -11,7 +11,7 @@ from whatthepatch import parse_patch
 def fix(original):
     response = requests.get(
         'https://m.search.naver.com/p/csearch/ocontent/util/SpellerProxy',
-        params=dict(q=original, color_blindness=0)
+        params=dict(passportKey=e59150cb92f83d6ec3e3c9dd0fa5be193dff7a0a, q=original, color_blindness=0)
     )
     print(response.json())
     return html.unescape(response.json()['message']['result']['notag_html'])
