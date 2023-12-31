@@ -13,6 +13,7 @@ def fix(original):
         'https://m.search.naver.com/p/csearch/ocontent/util/SpellerProxy',
         params=dict(q=original, color_blindness=0)
     )
+    print(response.json())
     return html.unescape(response.json()['message']['result']['notag_html'])
 
 
